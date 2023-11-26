@@ -67,6 +67,7 @@ const NavBar = () => {
     signOut(auth)
       .then(() => {
         setUserData({});
+        localStorage.removeItem('userData');
       })
       .catch((error) => {
         alert(error.message);
